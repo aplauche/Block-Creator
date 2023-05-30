@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name:       Basic Static - 02
+ * Plugin Name:       Basic Static - 03
  * Description:       Example block scaffolded with Create Block tool.
  * Requires at least: 6.1
  * Requires PHP:      7.0
