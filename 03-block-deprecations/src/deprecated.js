@@ -7,7 +7,7 @@ const v2 = {
 		content: {
 			type: "string",
 			source: "text",
-			selector: ".basic-block"
+			selector: "p"
 		}
 	},
   migrate({content}){
@@ -35,7 +35,7 @@ const v1 = {
 		content: {
 			type: "string",
 			source: "text",
-			selector: ".basic-block"
+			selector: "h2"
 		}
 	},
 	save: ({attributes}) => {
