@@ -24,7 +24,7 @@
 		"content": {
 			"type": "string",
 			"source": "text",
-			"selector": ".basic-block"
+			"selector": "h2"
 		}
 	},
 	"textdomain": "basic-static",
