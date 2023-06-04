@@ -1,0 +1,66 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+ .wp-block-create-block-cta-dynamic-block {
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+
+
+	.cta-image-container {
+		width: 60%;
+		align-self: stretch;
+		position: relative;
+		// background as placeholder
+		background: #e5e5e5;
+
+
+		img {
+			position: absolute;
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+			top: 0;
+			left: 0;
+			border-radius: 16px;
+		}
+	}
+
+	.cta-text-container {
+		width: 50%;
+		margin-left: -10%;
+		margin-top: 50px;
+		margin-bottom: 50px;
+		z-index: 2;
+		background: white;
+		box-shadow: 4px 0px 20px rgb(0,0,0,0.15);
+		border-radius: 16px;
+		padding: 32px;
+
+	}
+	
+	.wp-element-button {
+		display: inline-block;
+	}
+
+	@media (max-width: 768px){
+		flex-direction: column;
+
+		.cta-image-container {
+			width: 100%;
+			aspect-ratio: 1.25;
+		}
+
+		.cta-text-container {
+			width: 90%;
+			margin-left: 0;
+			margin-top: -50px;
+		}
+	}
+
+}

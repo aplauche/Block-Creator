@@ -1,0 +1,42 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "create-block/cta-dynamic-block",
+	"version": "0.1.0",
+	"title": "Cta Dynamic Block",
+	"category": "widgets",
+	"icon": "smiley",
+	"description": "Example block scaffolded with Create Block tool.",
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"layout_variant": {
+			"enum":["text-left", "text-right"],
+			"default": "text-right"
+		},
+		"image_id": {
+			"type": "number"
+		},
+		"image_url": {
+			"type": "string"
+		},
+		"heading": {
+			"type": "string"
+		},
+		"body": {
+			"type": "string"
+		},
+		"button_url": {
+			"type": "string"
+		},
+		"button_text": {
+			"type": "string"
+		}
+	},
+	"textdomain": "cta-dynamic-block",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}
