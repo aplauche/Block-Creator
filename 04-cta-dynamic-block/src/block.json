@@ -8,11 +8,12 @@
 	"icon": "smiley",
 	"description": "Example block scaffolded with Create Block tool.",
 	"supports": {
-		"html": false
+		"html": false,
+		"align": ["wide"]
 	},
 	"attributes": {
 		"layout_variant": {
-			"enum":["text-left", "text-right"],
+			"enum": ["text-left", "text-right"],
 			"default": "text-right"
 		},
 		"image_id": {
