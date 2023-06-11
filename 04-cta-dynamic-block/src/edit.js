@@ -11,9 +11,13 @@ import { __ } from '@wordpress/i18n';
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops
  */
-import { useBlockProps, RichText, MediaPlaceholder, BlockControls, URLInputButton, InspectorControls } from '@wordpress/block-editor';
+import { __experimentalLinkControl as LinkControl, useBlockProps, RichText, MediaPlaceholder, BlockControls, URLInputButton, InspectorControls } from '@wordpress/block-editor';
 
-import { ToolbarGroup, PanelBody, SelectControl } from '@wordpress/components'
+import { ToolbarGroup, PanelBody, SelectControl, ToolbarButton, Popover } from '@wordpress/components'
+
+import { useState } from '@wordpress/element';
+
+import { link } from '@wordpress/icons';
 
 /**
  * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
@@ -32,17 +36,39 @@ import './editor.scss';
  * @return {WPElement} Element to render.
  */
 export default function Edit({attributes, setAttributes}) {
+
+	const [ isVisible, setIsVisible ] = useState( false );
+	const toggleVisible = () => {
+			setIsVisible( ( state ) => ! state );
+	};
+
 	return (
 		<>
 
 			{/* Begin Toolbar Zone */}
 			<BlockControls>
 				<ToolbarGroup>
-					<URLInputButton
-						url={ attributes.button_url }
-						onChange={ ( url, post ) => setAttributes( { button_url: url }) }
+					<ToolbarButton
+						icon={ link }
+						label="Link"
+						onClick={toggleVisible}
 					/>
 				</ToolbarGroup>
+				{isVisible && (
+					<Popover
+						onClose={() => setIsVisible(false)}
+					>
+						<LinkControl
+							searchInputPlaceholder="Search here..."
+							value={ attributes.link }
+							settings={[]}
+							onChange={ ( newPost ) => {
+								setAttributes( { link: {...newPost, title: newPost.url} } ) }
+							}
+						>
+						</LinkControl>
+					</Popover>
+				)}
 			</BlockControls>
 			{/* End Toolbar Zone */}
 
@@ -69,6 +95,8 @@ export default function Edit({attributes, setAttributes}) {
 				</PanelBody>
 			</InspectorControls>
 			{/* End Sidebar Inspector Zone */}
+
+
 
 			{/* Begin Main Block Zone */}
 			<div { ...useBlockProps({className: `variant-${attributes.layout_variant}`}) }>
