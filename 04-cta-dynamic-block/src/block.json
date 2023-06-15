@@ -28,12 +28,6 @@
 		"body": {
 			"type": "string"
 		},
-		"button_url": {
-			"type": "string"
-		},
-		"button_text": {
-			"type": "string"
-		},
 		"link": {
 			"type": "object"
 		}

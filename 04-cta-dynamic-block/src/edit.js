@@ -55,9 +55,7 @@ export default function Edit({attributes, setAttributes}) {
 					/>
 				</ToolbarGroup>
 				{isVisible && (
-					<Popover
-						onClose={() => setIsVisible(false)}
-					>
+					<Popover>
 						<LinkControl
 							searchInputPlaceholder="Search here..."
 							value={ attributes.link }
