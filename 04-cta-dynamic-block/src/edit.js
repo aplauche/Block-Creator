@@ -11,7 +11,7 @@ import { __ } from '@wordpress/i18n';
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops
  */
-import { __experimentalLinkControl as LinkControl, useBlockProps, RichText, MediaPlaceholder, BlockControls, URLInputButton, InspectorControls } from '@wordpress/block-editor';
+import { __experimentalLinkControl as LinkControl, useBlockProps, RichText, MediaPlaceholder, BlockControls, InspectorControls } from '@wordpress/block-editor';
 
 import { ToolbarGroup, PanelBody, SelectControl, ToolbarButton, Popover } from '@wordpress/components'
 
@@ -37,9 +37,9 @@ import './editor.scss';
  */
 export default function Edit({attributes, setAttributes}) {
 
-	const [ isVisible, setIsVisible ] = useState( false );
-	const toggleVisible = () => {
-			setIsVisible( ( state ) => ! state );
+	const [ showLinkPopover, setShowLinkPopover ] = useState( false );
+	const toggleLinkPopover = () => {
+			setShowLinkPopover( ( state ) => ! state );
 	};
 
 	return (
@@ -51,17 +51,18 @@ export default function Edit({attributes, setAttributes}) {
 					<ToolbarButton
 						icon={ link }
 						label="Link"
-						onClick={toggleVisible}
+						onClick={toggleLinkPopover}
+						isPressed={showLinkPopover}
 					/>
 				</ToolbarGroup>
-				{isVisible && (
+				{showLinkPopover && (
 					<Popover>
 						<LinkControl
 							searchInputPlaceholder="Search here..."
 							value={ attributes.link }
-							settings={[]}
-							onChange={ ( newPost ) => {
-								setAttributes( { link: {...newPost, title: newPost.url} } ) }
+							onChange={ ( newLink ) => {
+								console.log(newLink)
+								setAttributes( { link: {...newLink, title: attributes.link.title || ""} } ) }
 							}
 						>
 						</LinkControl>
@@ -138,9 +139,9 @@ export default function Edit({attributes, setAttributes}) {
 						tagName='div'
 						className='wp-element-button'
 						allowedFormats={[]}
-						value={attributes.button_text}
-						onChange={(button_text) => setAttributes({button_text})}
-						placeholder='Button'
+						value={attributes.link.title}
+						onChange={(newTitle) => setAttributes({link: {...attributes.link, title: newTitle}})}
+						placeholder='Button text'
 					/>
 				</div>
 			</div>

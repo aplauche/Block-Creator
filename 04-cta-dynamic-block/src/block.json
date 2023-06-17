@@ -29,7 +29,10 @@
 			"type": "string"
 		},
 		"link": {
-			"type": "object"
+			"type": "object",
+			"default": {
+				"title": "Learn More"
+			}
 		}
 	},
 	"textdomain": "cta-dynamic-block",
