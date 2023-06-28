@@ -1,0 +1,47 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+
+// Adjust media placeholder element in editor
+
+.cta-image-container {
+	display: flex;
+	align-items: center;
+	padding: 20px;
+
+	.block-editor-media-placeholder {
+		width: 60% ;
+	}
+}
+
+// add styles for image removal button
+
+.button-remove {
+	z-index: 2;
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	background: white;
+	color: #b93535;
+	border: 2px solid #b93535;
+	cursor: pointer;
+	border-radius: 4px;
+}
+
+// handle layout variant in editor
+
+.variant-text-left {
+
+	.cta-image-container {
+		justify-content: flex-end;
+	}
+
+	.button-remove {
+		left: unset;
+		right: 20px;
+	}
+	
+}
