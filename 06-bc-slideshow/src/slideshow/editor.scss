@@ -1,0 +1,18 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.wp-block-create-block-slideshow {
+	border: 1px dotted black;
+	padding: 12px;
+
+	// Automatically generated div that wraps our inner blocks component
+	// You can find this class by using the inspector in the editor window
+	.block-editor-block-list__layout {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 12px;
+	}
+}

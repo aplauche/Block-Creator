@@ -1,0 +1,34 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+
+ .wp-block-create-block-slide {
+	.slide-image-container {
+		position: relative;
+		width: 100%;
+		height: auto;
+
+
+		.trash-icon {
+			box-sizing: border-box;
+			background: white;
+			padding: 4px;
+			cursor: pointer;
+			position: absolute;
+			top: 4px;
+			left: 4px;
+			z-index: 2;
+			border: 2px solid lightcoral;
+			fill: lightcoral;
+			border-radius: 100px;
+			transition: transform 0.3s ease-in-out;
+
+			&:hover {
+				transform: scale(1.1);
+			}
+		}
+	}
+}
