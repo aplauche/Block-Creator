@@ -1,0 +1,30 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "fsd/demo-basic-text",
+	"version": "0.1.0",
+	"title": "Demo Basic Text",
+	"category": "fsd-custom-blocks",
+	"icon": "editor-paragraph",
+	"description": "Example block scaffolded with Create Block tool.",
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"title": {
+			"type": "string",
+			"default": "Enter some text here..."
+		}
+	},
+	"example": {
+		"attributes": {
+			"title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec tellus eget ipsum condimentum viverra. In convallis neque metus, vel rhoncus justo pellentesque eu. Donec varius suscipit lacus, vitae tincidunt magna ultricies a. Duis vel nisi ex. Sed semper vehicula viverra. Etiam id vehicula neque."
+		}
+	},
+	"textdomain": "demo-basic-text",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php",
+	"viewScript": "file:./view.js"
+}
