@@ -1,0 +1,21 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.wp-block-fsd-menu {
+	border: 1px dotted black;
+	padding: 8px;
+}
+
+.wp-block-fsd-menu {
+	display: block;
+
+	.block-editor-block-list__layout {
+		display: grid;
+		grid-template-columns:  1fr 1fr;
+		gap: 20px;
+	}
+}
+
