@@ -4,7 +4,7 @@
  */
 ?>
 
-<?php echo $block->context['menu/menu_style'] ?>
+<?php // echo $block->context['menu/menu_style'] ?>
 
 <?php switch ($block->context['menu/menu_style']) {
 	case 'minimal': ?>
