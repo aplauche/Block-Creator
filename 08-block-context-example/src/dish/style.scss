@@ -1,0 +1,58 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+// Styles for 'Card' Style
+
+.menu-item--card {
+	border: 1px solid #eee;
+	box-shadow: 0px 2px 12px rgba(0,0,0,0.1);
+	border-radius: 12px;
+	overflow: hidden;
+
+	.menu-item__image-container {
+		width: 100%;
+		height: 200px;
+		position: relative;
+
+		img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	.menu-item__text-container {
+		padding: 16px;
+		display: flex;
+		gap: 16px;
+		align-items: center;
+		justify-content: space-between;
+
+		h5, p {
+			margin: 0;
+		}
+	}
+}
+
+//  Styles for 'Minimal' Style
+
+ .menu-item--minimal {
+	text-align: center;
+	margin-bottom: 20px;
+
+	h5 {
+		margin-bottom: 8px;
+		border-bottom: 1px solid black;
+	}
+
+	p {
+		margin: 0;
+	}
+}
