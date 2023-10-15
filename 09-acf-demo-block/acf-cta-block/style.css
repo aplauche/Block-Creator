@@ -1,0 +1,86 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.acf-cta-block {
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+}
+
+
+.acf-cta-block .cta-image-container {
+  width: 70%;
+  align-self: stretch;
+  position: relative;
+  background: #e5e5e5;
+}
+
+.acf-cta-block img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+}
+
+.acf-cta-block .cta-text-container {
+  box-sizing: border-box;
+  width: 50%;
+  margin-left: -20%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  z-index: 2;
+  background: white;
+  box-shadow: 4px 0px 20px rgb(0,0,0,0.15);
+  border-radius: 16px;
+  padding: 50px 32px;
+}
+
+.acf-cta-block h2 {
+  margin-top: 0;
+}
+
+.acf-cta-block .wp-element-button {
+  display: inline-block;
+}
+
+
+.acf-cta-block.variant-text-left {
+  flex-direction: row-reverse;
+}
+
+.acf-cta-block.variant-text-left .cta-image-container {
+  justify-content: flex-end;
+}
+
+.acf-cta-block.variant-text-left .cta-text-container {
+  margin-left: 0%;
+  margin-right: -20%;
+}
+
+
+
+@media (max-width: 768px){
+
+  .acf-cta-block.variant-text-left, .acf-cta-block.variant-text-right {
+    flex-direction: column;
+  }
+
+  .acf-cta-block .cta-image-container {
+    width: 100%;
+    aspect-ratio: 1.25;
+  }
+
+  .acf-cta-block .cta-text-container {
+    width: 90%;
+    margin-left: 0;
+    margin-top: -50px;
+  }
+}
+

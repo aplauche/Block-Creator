@@ -1,0 +1,19 @@
+{
+  "name": "acf/acf-cta",
+  "title": "ACF call to action",
+  "description": "A simple call to action block powered by ACF",
+  "category": "formatting",
+  "icon": "align-center",
+  "acf": {
+      "mode": "preview",
+      "renderTemplate": "render.php"
+  },
+  "supports": {
+    "anchor": true,
+    "color": {
+      "text": true,
+      "background": false
+    }
+  },
+  "style": ["file:./style.css"]
+}
