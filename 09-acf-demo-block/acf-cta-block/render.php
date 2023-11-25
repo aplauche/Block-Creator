@@ -13,9 +13,23 @@
 
 $layout_variant = get_field("layout_variant");
 $image = get_field("image");
-$heading = get_field("heading");
-$body = get_field("body");
-$link = get_field("link");
+// $heading = get_field("heading");
+// $body = get_field("body");
+// $link = get_field("link");
+
+
+$allowedBlocks = [ 'core/buttons', 'core/paragraph', 'core/heading', 'core/list' ];
+
+$template = [
+    ['core/heading', ["placeholder"=> "This is the heading"]],
+    ['core/paragraph', ["placeholder" =>  "Lorem Ipsum..."]],
+    ['core/buttons', [],
+        [
+            ['core/button', ["placeholder" => "Add Button text..."]],
+            ['core/button', ["placeholder" => "Another Button..."]],
+        ]
+    ],
+];
 
 ?>
 
@@ -24,6 +38,16 @@ $link = get_field("link");
 		<?php echo wp_get_attachment_image( $image, "full" ); ?>
 	</div>
 	<div class="cta-text-container">
+        <InnerBlocks 
+
+        />
+	</div>
+</div>
+
+<?php 
+
+/*
+
 		<h2><?php echo esc_html($heading) ?></h2>
 		<p><?php echo esc_html($body) ?></p>
     <?php if(!empty($link)): ?>
@@ -31,5 +55,6 @@ $link = get_field("link");
 			<?php echo esc_html($link["title"]) ?>
 		</a>
     <?php endif; ?>
-	</div>
-</div>
+*/
+
+?>

@@ -9,6 +9,7 @@
       "renderTemplate": "render.php"
   },
   "supports": {
+    "jsx": true,
     "anchor": true,
     "color": {
       "text": true,
