@@ -13,13 +13,14 @@
  * @package           fsdacf
  */
 
-// Define our handy constants.
+// Define our constants.
 define( 'PLUGIN_DIR', __DIR__ );
 define( 'PLUGIN_URL', plugin_dir_url( __FILE__ ) );
-//define( 'BLOCKS_DIR', PLUGIN_DIR . '/blocks/' );
 
 
 // Includes
 require 'includes/acf-config.php';
-require 'includes/permissions.php';
 require 'includes/register-blocks.php';
+
+// Extras
+// require 'includes/permissions.php';
