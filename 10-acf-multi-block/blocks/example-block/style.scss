@@ -1,5 +1,7 @@
+$black: #000;
+
 .wp-block-acf-example-block {
-  border: 2px solid black;
+  border: 2px solid $black;
   border-radius: 16px;
   padding: 2rem;
 }

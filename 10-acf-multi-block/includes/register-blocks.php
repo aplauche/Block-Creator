@@ -2,7 +2,7 @@
 
 
 function fsdacf_register_all_blocks() {
-	$block_directories = glob(PLUGIN_DIR . "/blocks/*", GLOB_ONLYDIR);
+	$block_directories = glob(PLUGIN_DIR . "/build/*", GLOB_ONLYDIR);
 
 	foreach ($block_directories as $block) {
 		register_block_type( $block );

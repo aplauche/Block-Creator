@@ -15,5 +15,6 @@
             "background": true
         }
     },
-    "style": ["file:./style.css"]
+    "style": ["file:./style-index.css"],
+    "script": ["file:./index.js"]
 }

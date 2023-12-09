@@ -1,0 +1,16 @@
+{
+  "name": "10-acf-multi-block",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "wp-scripts start --webpack-src-dir=blocks --webpack-copy-php",
+    "build": "wp-scripts build --webpack-src-dir=blocks --webpack-copy-php"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@wordpress/scripts": "^26.9.0"
+  }
+}
