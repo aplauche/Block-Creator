@@ -13,6 +13,7 @@
 	},
 	"attributes": {
 		"layout_variant": {
+			"type": "string",
 			"enum": ["text-left", "text-right"],
 			"default": "text-right"
 		},
